@@ -7,12 +7,19 @@ import {
  } from 'react-router-dom'
 import Root from './routes/Root'
 import Error from './Error'
+import Contact from './routes/Contact'
 
  const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     errorElement: <Error />,
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact />,
+      },
+    ],
   },
  ])
 
