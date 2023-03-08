@@ -2,13 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
-   createBrowserRouter, RouterProvider
+   createBrowserRouter, 
+   RouterProvider
  } from 'react-router-dom'
+import Root from './routes/Root'
 
  const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Router v6.8</div>
+    element: <Root />
   }
  ])
 
