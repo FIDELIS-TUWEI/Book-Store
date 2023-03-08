@@ -10,7 +10,8 @@ import Root from './routes/Root'
  const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />
+    element: <Root />,
+    errorElement: <Error />
   }
  ])
 
