@@ -6,13 +6,14 @@ import {
    RouterProvider
  } from 'react-router-dom'
 import Root from './routes/Root'
+import Error from './Error'
 
  const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Error />
-  }
+    errorElement: <Error />,
+  },
  ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
