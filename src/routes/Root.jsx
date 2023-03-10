@@ -1,8 +1,8 @@
 import { Outlet, Link, useLoaderData } from "react-router-dom";
-import { getContact } from "../Contacts";
+import { getContacts } from "../contacts";
 
 export async function loader() {
-  const contacts = await getContact()
+  const contacts = await getContacts()
 
   return { contacts };
 }
