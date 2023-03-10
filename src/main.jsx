@@ -5,7 +5,10 @@ import {
    createBrowserRouter, 
    RouterProvider
  } from 'react-router-dom'
-import Root, { loader as rootLoader } from './routes/Root'
+import Root, { 
+  loader as rootLoader,
+  action as rootAction 
+} from './routes/Root'
 import Error from './Error'
 import Contact from './routes/Contact'
 
