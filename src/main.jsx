@@ -27,7 +27,7 @@ import EditContact from './routes/Edit'
         loader: contactLoader,
       },
       {
-        path: "contacts/:contactId",
+        path: "contacts/:contactId/edit",
         element: <EditContact />,
         loader: contactLoader,
       },
