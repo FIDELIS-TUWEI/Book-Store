@@ -19,6 +19,7 @@ import EditContact from './routes/Edit'
     element: <Root />,
     errorElement: <Error />,
     loader: rootLoader,
+    action: rootAction,
     children: [
       {
         path: "contacts/:contactId",
