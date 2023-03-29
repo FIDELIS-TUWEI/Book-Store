@@ -27,7 +27,7 @@ import EditContact, { action as editAction } from './routes/Edit'
         loader: contactLoader,
       },
       {
-        path: "contacts/:contactId/edit",
+        path: "contacts/:contactId/Edit",
         element: <EditContact />,
         loader: contactLoader,
         action: editAction,
