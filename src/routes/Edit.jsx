@@ -9,7 +9,7 @@ export async function action ({request, params}) {
 }
 
 export default function EditContact() {
-  const { contact } = useLoaderData();
+  const  contact  = useLoaderData();
 
   return (
     <Form method="post" id="contact-form">
