@@ -13,10 +13,31 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
+const requestLogger = (req, res, next) => {
+    console.log('Method:', req.method);
+    console.log('Path:', req.path);
+    console.log('Body', req.body);
+    console.log('---');
+
+    next();
+};
+
+app.use(requestLogger);
+
 app.get("/", (req, res) => {
     res.json("Backend Server running")
+});
+
+app.get("/books", (req, res) => {
+    const querybooks = "SELECT * FROM books";
+
+    db.query(querybooks, (err, data) => {
+        if (err) return res.json(err);
+
+        return res.json(data);
+    });
 })
 
 app.listen(PORT, () => {
     console.log('Connected to backend!');
-})
+});
