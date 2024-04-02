@@ -1,11 +1,11 @@
 const booksRouter = require('express').Router();
 const db = require('../database');
 
-booksRouter.get("/", (req, res) => {
-    res.json("Backend Server running")
+booksRouter.get('/', (req, res) => {
+    res.send("Backend Server running")
 });
 
-booksRouter.get("/api/books", (req, res) => {
+booksRouter.get('/api/books', (req, res) => {
     const getBooks = "SELECT * FROM books";
 
     db.query(getBooks, (err, data) => {
