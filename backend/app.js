@@ -13,9 +13,12 @@ const db = mysql.createConnection({
     database: config.DATABASE
 });
 
-app.use("/api/books", booksRouter);
+app.use(express.json());
 app.use(middleware.requestLogger);
 app.disable("x-powered-by");
+
+app.use("/api/books", booksRouter);
+app.use(middleware.unknownEndpoint);
 
 module.exports = {
     app,
