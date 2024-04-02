@@ -1,7 +1,7 @@
 const booksRouter = require('express').Router();
-const db = require('../app');
+const db = require('../database');
 
-booksRouter.get("/api/books", (req, res) => {
+booksRouter.get("/", (req, res) => {
     res.json("Backend Server running")
 });
 
