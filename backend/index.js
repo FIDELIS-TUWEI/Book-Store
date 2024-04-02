@@ -4,5 +4,5 @@ const logger = require('./utils/logger');
 
 
 app.listen(config.PORT, () => {
-    logger.info('Connected to backend!');
+    logger.info(`Connected to backend running on ${config.PORT}`);
 });
