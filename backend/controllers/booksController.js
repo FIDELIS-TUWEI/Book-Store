@@ -17,4 +17,21 @@ booksRouter.get('/api/books', (req, res) => {
 
 });
 
+// route to create new book
+booksRouter.post('/api/books', (req, res) => {
+    const newBook = "INSERT INTO books (`title`, `desc`, `cover`) VALUES(?)";
+
+    const values = [
+        "title from backend", 
+        "description from backend", 
+        "cover picture from backend"
+    ];
+
+    db.query(newBook, [values], (err, data) => {
+        if (err) return res.json(err);
+
+        return res.json("Book has been created successfully");
+    })
+})
+
 module.exports = booksRouter;
