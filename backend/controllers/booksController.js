@@ -22,9 +22,9 @@ booksRouter.post('/api/books', (req, res) => {
     const newBook = "INSERT INTO books (`title`, `desc`, `cover`) VALUES(?)";
 
     const values = [
-        "title from backend", 
-        "description from backend", 
-        "cover picture from backend"
+        req.body.title,
+        req.body.desc,
+        req.body.cover
     ];
 
     db.query(newBook, [values], (err, data) => {
