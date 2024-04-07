@@ -5,6 +5,7 @@ booksRouter.get('/', (req, res) => {
     res.send("Backend Server running")
 });
 
+// route to get all books
 booksRouter.get('/api/books', (req, res) => {
     const getBooks = "SELECT * FROM books";
 
