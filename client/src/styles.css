@@ -33,7 +33,7 @@ img {
     background-color: white;
     border: 1px solid lightgreen;
     border-radius: 4px;
-    padding: 3px 6px;
+    padding: 6px;
 }
 
 .link-add {
@@ -43,6 +43,32 @@ img {
 
 .link-update {
     text-decoration: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formButton {
+    border: none;
+    padding: 10px;
+    background: rgb(244, 142, 74);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.add-btn {
+    padding: 3px 6px;
 }
 
 .update {
