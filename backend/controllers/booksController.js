@@ -19,12 +19,13 @@ booksRouter.get('/books', (req, res) => {
 
 // route to create new book
 booksRouter.post('/books', (req, res) => {
-    const newBook = "INSERT INTO books (`title`, `desc`, `cover`) VALUES(?)";
+    const newBook = "INSERT INTO books (`title`, `desc`, `cover`, `price`) VALUES(?)";
 
     const values = [
         req.body.title,
         req.body.desc,
-        req.body.cover
+        req.body.cover,
+        req.body.price,
     ];
 
     db.query(newBook, [values], (err, data) => {
