@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Add, Books, Update } from "./pages";
-function App() {
+
+const App = () => {
 
   return (
-    <div>
+    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Books />} />
@@ -15,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
