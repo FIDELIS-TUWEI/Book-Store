@@ -6,7 +6,7 @@ booksRouter.get('/', (req, res) => {
 });
 
 // route to get all books
-booksRouter.get('/api/books', (req, res) => {
+booksRouter.get('/books', (req, res) => {
     const getBooks = "SELECT * FROM books";
 
     db.query(getBooks, (err, data) => {
@@ -18,7 +18,7 @@ booksRouter.get('/api/books', (req, res) => {
 });
 
 // route to create new book
-booksRouter.post('/api/books', (req, res) => {
+booksRouter.post('/books', (req, res) => {
     const newBook = "INSERT INTO books (`title`, `desc`, `cover`) VALUES(?)";
 
     const values = [
