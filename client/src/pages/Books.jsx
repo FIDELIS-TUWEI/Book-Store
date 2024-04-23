@@ -15,7 +15,8 @@ const Books = () => {
             }
         }
         fetchBooks();
-    }, [])
+    }, []);
+    
   return (
     <div>
         <h1>MySQL Book Shop</h1>
