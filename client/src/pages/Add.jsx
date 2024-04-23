@@ -29,15 +29,15 @@ const Add = () => {
   };
 
   return (
-    <div className="form">
+    <div>
       <h1>Add New Book Form</h1>
-      <form>
+      <form className="form">
         <input type="text" placeholder="title" onChange={handleChange} name="title" />
         <input type="text" placeholder="desc" onChange={handleChange} name="desc" />
         <input type="number" placeholder="price" onChange={handleChange} name="price" />
         <input type="text" placeholder="cover" onChange={handleChange} name="cover" />
 
-        <button onClick={handleClick}>Add</button>
+        <button onClick={handleClick} className="add-btn">Add</button>
       </form>
     </div>
   )
