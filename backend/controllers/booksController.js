@@ -35,13 +35,33 @@ booksRouter.post('/books', (req, res) => {
     })
 });
 
+// route to update book with id
+booksRouter.put('/books/:id', (req, res) => {
+    const bookId = req.params.id;
+
+    const q = "UPDATE books SET `title` = ?, `desc` = ?, `cover` = ?, `price` = ? WHERE id = ?";
+
+    const values = [
+        req.body.title,
+        req.body.desc,
+        req.body.cover,
+        req.body.price,
+    ];
+
+    db.query(q, [...values, bookId], (err, data) => {
+        if (err) return res.json(err);
+
+        return res.json("Book Updated succesfully");
+    });
+})
+
 // route to delete book with id
 booksRouter.delete('/books/:id', (req, res) => {
-    const booksId = req.params.id;
+    const bookId = req.params.id;
 
     const q = "DELETE FROM  books WHERE id = ?";
 
-    db.query(q, [booksId], (err, data) => {
+    db.query(q, [bookId], (err, data) => {
         if (err) return res.json(err);
         return res.json("Book has been deleted succesfully");
     })
